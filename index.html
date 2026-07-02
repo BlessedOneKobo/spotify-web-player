@@ -5,11 +5,30 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Spotify Web Playback SDK Quick Start</title>
+		<link rel="stylesheet" href="./src/styles.css" />
 	</head>
 	<body>
 		<h1>Spotify Web Playback SDK Quick Start</h1>
 		<div id="app">
 			<button id="togglePlay">Toggle Play</button>
+			<br />
+			<p id="trackName"></p>
+			<div id="trackAlbumArt">
+				<img src="" width="64" height="64" />
+			</div>
+			<progress id="trackProgress" max="100" value="0"></progress>
+			<br />
+			<p>Volume:</p>
+			<div>
+				<button id="volumeDown">-</button>
+				<progress
+					id="volumeProgress"
+					max="1"
+					value="0.5"
+					style="max-width: 80px"
+				></progress>
+				<button id="volumeUp">+</button>
+			</div>
 		</div>
 		<script src="https://sdk.scdn.co/spotify-player.js"></script>
 		<script type="module" src="/src/main.js"></script>
